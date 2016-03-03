@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Problem 3</title>
+    <script>
+        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+        function groupDataType(array) {
+            var allArray = [];
+            var stringArray = [];
+            var numberArray = [];
+            var booleanArray = [];
+
+            for (var i = 0; i < array.length; i++){
+                if (typeof array[i] === "string"){
+                    stringArray.push(array[i]);
+                    // allArray.push(stringArray);
+                    //console.log(stringArray);
+                }
+                else if (typeof array[i] === "number"){
+                    numberArray.push(array[i]);
+                    // allArray.push(numberArray);
+                }
+                else if (typeof array[i] === "boolean"){
+                    booleanArray.push(array[i]);
+                    //allArray.push(booleanArray);
+                }
+            }
+            allArray.push(stringArray,numberArray,booleanArray);
+            return allArray;
+        }
+        var a = groupDataType(myArray);
+        document.write(a);
+        //console.log(a);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
